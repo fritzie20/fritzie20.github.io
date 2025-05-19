@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Fritzie</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+
+   header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem 2rem; /* tambah padding atas-bawah jadi 4rem */
+  text-align: center;
+}
+
+
+    
+header h1 {
+  font-size: 3.5rem; /* lebih besar dari 2.5rem */
+  margin: 0.5rem 0;  /* beri sedikit jarak atas bawah */
+}
+
+header p {
+  font-size: 1.5rem; /* lebih besar dari 1.2rem */
+  color: #ccc;
+}
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      border-left: 5px solid #00c3ff;
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Flex container untuk project */
+    .projects {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap; /* Supaya kalau layar kecil card bisa turun */
+      justify-content: center;
+    }
+
+    /* Card untuk project */
+    .project {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      flex: 1 1 300px; /* flexible basis 300px, bisa tumbuh dan menyusut */
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      object-fit: cover;
+      max-height: 200px;
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
+
+    .project h3 {
+      margin: 0 0 0.5rem 0;
+      flex-shrink: 0;
+    }
+
+    .project p {
+      margin: 0;
+      color: #ccc;
+      flex-grow: 1; /* supaya deskripsi ambil ruang sisa */
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #aaa;
+    }
+
+    .contact a {
+      color: #00c3ff;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .projects {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center; /* supaya 3 card ini sejajar di tengah */
+}
+.profile-photo {
+  width: 150px;  /* dari 120px jadi 150px */
+  height: 150px; /* dari 120px jadi 150px */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00c3ff;
+  margin-bottom: 1.5rem; /* lebih besar jarak bawah foto */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 195, 255, 0.6);
+}
+.about {
+  margin-bottom: 10rem; /* menambah jarak bawah About Me */
+}
+
+.projects-section {
+  margin-top: 10rem; /* jika kamu ingin tambahkan class khusus */
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+  <img src="images/1.png" alt="Foto Fritzie" class="profile-photo" />
+  <h1>Fritzie Sayyidinnas Mazaya</h1>
+  <p>Software Engineer</p>
+</header>
+
+  <div class="container">
+    <section class="about" style="margin-bottom: 5rem;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">About Me</h2>
+      <p>Saya adalah mahasiswa Software Engineering yang penuh semangat dan dedikasi dalam menciptakan solusi digital inovatif. Saya sangat tertarik pada pengembangan web modern, pemrograman backend yang efisien, serta selalu berusaha menguasai teknologi terbaru untuk menghadirkan hasil yang berdampak nyata.</p>
+    </section>
+
+    <section style="margin-top: 5rem;">
+  <h2 style="text-align: center; margin-bottom: 2rem;">My Project</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="images/car-project.png" alt="Website Pemesanan Kursus" />
+      <h3>Website Pemesanan Kursus</h3>
+      <p>Mengembangkan website kursus mengemudi dengan fitur pendaftaran online, pengelolaan jadwal kursus, dan integrasi database PostgreSQL untuk penyimpanan data pengguna dan transaksi..</p>
+    </div>
+    <div class="project">
+      <img src="images/hotel.png" alt="Aplikasi Todo List" />
+      <h3>Aplikasi Todo List</h3>
+      <p>Membangun aplikasi mobile sederhana untuk pemesanan kamar hotel, menampilkan informasi fasilitas, sistem rating kamar, dan antarmuka yang responsif untuk pengalaman pengguna yang lebih baik.</p>
+    </div>
+    <div class="project">
+      <img src="images/kbk.png" alt="Project Ketiga" />
+      <h3>Project Ketiga</h3>
+      <p>Membangun website manajemen Kelompok Bidang Keahlian (KBK) untuk jurusan menggunakan Laravel. Sistem ini mencakup fitur data master yang berisi informasi jurusan, program studi, dosen, dan mahasiswa. Platform juga mendukung fitur unggah dokumen dalam format PDF dan Excel untuk mempermudah manajemen dan analisis data. </p>
+    </div>
+  </div>
+</section>
+
+
+    <section class="contact">
+  <h2 style="text-align: center; margin-bottom: 2rem;">Contact</h2>
+  <p>
+    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="20" height="20" fill="#00c3ff" viewBox="0 0 24 24">
+      <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+    <a href="mailto:fritziemazaya20@gmail.com" style="color:#00c3ff; text-decoration:none; margin-left:6px;">fritziemazaya20@gmail.com</a>
+  </p>
+  <p>
+    <svg xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;" width="20" height="20" fill="#00c3ff" viewBox="0 0 24 24">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.291c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.291h-3v-4.5c0-1.072-.928-1.5-1.5-1.5s-1.5.428-1.5 1.5v4.5h-3v-9h3v1.5c.583-1.083 3-1.167 3 1v6.5z"/>
+    </svg>
+    <a href="https://linkedin.com/in/fritziesayyidinnasmazaya" target="_blank" style="color:#00c3ff; text-decoration:none; margin-left:6px;">linkedin.com/in/fritziesayyidinnasmazaya</a>
+  </p>
+</section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Fritzie. Semua hak dilindungi.
+  </footer>
+</body>
+</html>
